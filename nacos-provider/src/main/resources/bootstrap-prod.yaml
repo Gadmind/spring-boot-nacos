@@ -1,0 +1,15 @@
+#生产环境
+server:
+  port: 8070
+spring:
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      server-addr: 127.0.0.1:8848
+      discovery:
+        namespace: 397a91bf-ce1c-4d00-89e7-c44c0fa3ac3f
+      config:
+        file-extension: yaml
+        context-path: /nacos
+        namespace: 397a91bf-ce1c-4d00-89e7-c44c0fa3ac3f
