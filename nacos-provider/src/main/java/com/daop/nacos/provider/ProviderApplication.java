@@ -1,11 +1,11 @@
 package com.daop.nacos.provider;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -24,10 +24,17 @@ public class ProviderApplication {
 
     @RestController
     class EchoController {
+
+        @Value("${user.name}")
+        private String name;
+
+        @Value("${user.age}")
+        private String age;
+
         @GetMapping("/echo/{string}")
         public String echo(@PathVariable String string) {
-            System.out.println("服务被调用，传入的参数是："+string);
-            return "Hello Nacos Discovery\t" + string;
+            String params = "服务被调用，传入的参数是：" + string + "\t配置文件中的数据，userName:" + name + "\tage:" + age;
+            return "Hello Nacos Discovery\t" + string+"\t"+params;
         }
     }
 }
