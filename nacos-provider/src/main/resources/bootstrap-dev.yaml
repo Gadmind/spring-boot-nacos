@@ -1,0 +1,19 @@
+#开发环境
+server:
+  port: 8060
+spring:
+  cloud:
+    nacos:
+      #配置中心用户名
+      username: nacos
+      #配置中心用户密码
+      password: nacos
+      server-addr: 127.0.0.1:8848
+      discovery:
+        namespace: 8a0b8cfc-01cb-4025-a382-41101a15dacd
+      config:
+        namespace: 8a0b8cfc-01cb-4025-a382-41101a15dacd
+        #配置中心配置服务DataID文件后缀
+        file-extension: yaml
+        #配置中心访问路径
+        context-path: /nacos
