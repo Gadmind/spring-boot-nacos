@@ -1,3 +1,8 @@
+
 spring:
   profiles:
     active: dev
+#=========Dubbo=========#
+dubbo:
+  cloud:
+    subscribed-services: nacos-provider
