@@ -5,8 +5,8 @@ spring:
 #=========Dubbo=========#
 dubbo:
   scan:
-    # dubbo 服务扫描基准包
-    base-packages: org.springframework.cloud.alibaba.dubbo.bootstrap
+    # dubbo 服务扫描基准包 该配置扫描的是项目中带有@DubboService注解的类
+    base-packages: com.daop.nacos.provider
   protocol:
     # dubbo 协议
     name: dubbo

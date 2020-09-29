@@ -6,7 +6,7 @@ import org.apache.dubbo.config.annotation.DubboService;
 /**
  * @BelongsProject: spring-cloud-nacos
  * @BelongsPackage: com.daop.nacos.provider.service.impl
- * @Description: 实现Dubbo本地包中的接口
+ * @Description: 通过Dubbo对服务进行注册
  * @DATE: 2020-09-28
  * @AUTHOR: Administrator
  **/
