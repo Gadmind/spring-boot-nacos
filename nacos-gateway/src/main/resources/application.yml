@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.1.108:9090
+      eager: true
+    gateway:
+      enabled: true
+      #route Id ×ª»¯Ð¡Ð´
+      discovery:
+        locator:
+          lower-case-service-id: true
+      routes:
+        - id: test
+          uri: http://localhost:8060/
+          predicates:
+            - Path: /**
+          filters:
+            - RewritePath=/(?<segment>.*),/$\{segment}
