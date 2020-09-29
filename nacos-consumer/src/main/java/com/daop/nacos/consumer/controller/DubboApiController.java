@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @BelongsProject: spring-cloud-nacos
  * @BelongsPackage: com.daop.nacos.consumer.controller
- * @Description: DubboAPI调用请求
+ * @Description: DubboAPI调用请求 通过cloud-Dubbo进行远程服务调用
  * @DATE: 2020-09-28
  * @AUTHOR: Administrator
  **/
