@@ -1,7 +1,12 @@
-
 spring:
   profiles:
     active: dev
+  cloud:
+    #Sentinel流量监控中心地址
+    sentinel:
+      transport:
+        dashboard: 192.168.1.108:9000
+      eager: true
 #=========Dubbo=========#
 dubbo:
   cloud:

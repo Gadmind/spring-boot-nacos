@@ -1,19 +1,26 @@
 spring:
+  application:
+    name: nacos-gateway
   cloud:
     sentinel:
       transport:
-        dashboard: 192.168.1.108:9090
+        # Sentinel流量监控中心地址
+        dashboard: 192.168.1.108:9000
       eager: true
     gateway:
       enabled: true
-      #route Id ת��Сд
+      #route Id 转化小写
       discovery:
         locator:
           lower-case-service-id: true
       routes:
-        - id: test
-          uri: http://localhost:8060/
+        # 自定义的路由ID,保持唯一
+        - id: nacos-consumer
+          #目标服务地址
+          uri: http://192.168.1.108:8080
+          #路由条件
           predicates:
-            - Path: /**
-          filters:
-            - RewritePath=/(?<segment>.*),/$\{segment}
+            #服务接口路径
+            - Path=/dubbo/**
+server:
+  port: 9090
