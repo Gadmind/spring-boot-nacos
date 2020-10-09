@@ -52,6 +52,11 @@
             <artifactId>sentinel-apache-dubbo-adapter</artifactId>
             <version>1.8.0</version>
         </dependency>
+        <!--RocketMQ依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
